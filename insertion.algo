@@ -1,0 +1,14 @@
+PROCEDURE insertion_sort (var tab:array of integer) 
+var
+i,j,key : integer;
+begin
+    for i form 1 to tab.length step 1 do
+       key = tab[i]; 
+        j = i - 1; 
+        while (j >= 0 and tab[j] > key)        
+            tab[j + 1] = tab[j]; 
+            j = j - 1; 
+        end while 
+        tab[j + 1] = key;   
+    end for    
+end
